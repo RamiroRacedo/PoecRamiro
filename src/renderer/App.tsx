@@ -11,7 +11,7 @@ function App() {
     <div className="Home">
       <h1>{titulo}</h1>
       <Home />
-      <BotonReusable />
+      <BotonReutilisable />
     </div>
   );
 }

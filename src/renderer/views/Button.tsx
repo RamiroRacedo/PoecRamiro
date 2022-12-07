@@ -8,7 +8,7 @@ type PropsBoton = {
   link: string;
 };
 
-function BotonReusable( { link, name }: PropsBoton) {
+function BotonReutilisable( { link, name }: PropsBoton) {
   return (
     <div>
       <button>
@@ -22,4 +22,4 @@ function BotonReusable( { link, name }: PropsBoton) {
 }
 
 
-export default BotonReusable;
+export default BotonReutilisable;
