@@ -43,7 +43,7 @@ export default class MenuBuilder {
 
       Menu.buildFromTemplate([
         {
-          label: 'Inspeccionar element',
+          label: 'Inspect element',
           click: () => {
             this.mainWindow.webContents.inspectElement(x, y);
           },
@@ -57,7 +57,7 @@ export default class MenuBuilder {
       label: 'Electron',
       submenu: [
         {
-          label: 'About ElectronReact',
+          label: 'z ElectronReact',
           selector: 'orderFrontStandardAboutPanel:',
         },
         { type: 'separator' },
@@ -195,11 +195,11 @@ export default class MenuBuilder {
   buildDefaultTemplate() {
     const templateDefault = [
       {
-        label: '&archivo',
+        label: '&Archivo',
         submenu: [
           {
-            label: '&abrir',
-            accelerator: 'Ctrl+O',
+            label: '&Abrir',
+            accelerator: 'Ctrl+A',
           },
           {
             label: '&Cerrar',

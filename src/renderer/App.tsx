@@ -1,19 +1,33 @@
+import { Button } from '@mui/material';
+import { useEffect, useState } from 'react';
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import icon from '../../assets/icon.svg';
+import imagen from './imagen.svg';
 import './App.css';
-import BotonReusable from './views/Button';
+import Menus from './components/Menus';
 import Home from './views/Home';
+import Profile from './views/Profile';
+import BotonReutilizable from './views/Button';
 
-function App() {
-  let titulo = 'Clase del POEC';
+export default function App() {
+  const [title, setTitle] = useState<string>('Cargando');
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTitle('Clase de POEC');
+    }, 3000);
+  }, []);
 
   return (
-    <div className="Home">
-      <h1>{titulo}</h1>
-      <Home />
-      <BotonReutilisable />
+    <div className="App">
+      <Menus />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Profile />} />
+          <Route path="/" element={<Home title={title} />} />
+        </Routes>
+      </Router>
+      <BotonReutilizable />
     </div>
   );
 }
 
-export default App;

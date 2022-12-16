@@ -1,13 +1,15 @@
-import imagen from './imagen.png';
+import { Button } from '@mui/material';
+import Title from 'renderer/components/Title';
+import Profile from './Profile.tsx';
 
-type PropsHome = {
-  classes?: string;
-};
-
-function Home() {
+interface HomeProps {
+  title: string;
+}
+function Home({ title }: HomeProps) {
   return (
     <div>
-      <img src="src\renderer\views\imagen.png" alt="fsd" />
+      <Title title={title} />
+      <Button href='src\renderer\views\Profile.tsx'>Ver perfil</Button>
     </div>
   );
 }
